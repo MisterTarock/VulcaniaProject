@@ -5,7 +5,7 @@
 ##   \___/ |____/|____/\___  >____  /___|  /__(____  /
 ##                         \/     \/     \/        \/
 
-
+import os
 import json
 from bottle import Bottle, route , run , template , post , request, static_file
 
@@ -254,7 +254,8 @@ def succes ():
     '''
 
 #Starting of the local server, ♫ ♫ 6,9, soixante-neuf, c'est le plaisir des dieux!! ♫ ♫ ♫ 
-run(app, host='localhost', port=6969)
+#run(app, host='localhost', port=6969)
+run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
 
 ##
 ##                                                                                     `                                                                                                                  
