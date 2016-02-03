@@ -1,0 +1,125 @@
+/*
+  _________ __           __           _________   _________ _________
+ /   _____//  |_ ___ __ |  |   ____   \_   ___ \ /   _____//   _____/
+ \_____  \\   __<   |  ||  | _/ __ \  /    \  \/ \_____  \ \_____  \ 
+ /        \|  |  \___  ||  |_\  ___/  \     \____/        \/        \
+/_______  /|__|  / ____||____/\___  >  \______  /_______  /_______  /
+        \/       \/               \/          \/        \/        \/
+*/
+
+
+/*The main style of the first page*/
+body{
+	background-image:url("Vulcania.jpg");
+	background-size:contain;
+	position: relative;
+}
+header h1{
+		width:100%;
+		text-align:center;
+		color:white;
+		font-size: XXX-large;
+		font-family: Lucida Calligraphy;
+}
+/*Underlined title 'les personnes ajoutées'*/
+p{
+	color:white;
+	font-family: Lucida Calligraphy;
+	font-weight : bold;
+	text-decoration: underline;
+}
+/*List of the people*/
+article{
+	font-size:large;
+	color: white;
+	text-decoration:none;
+	font-family: Lucida Calligraphy;
+}
+article:hover{
+	color:rgb(200,0,245);
+}
+
+/*The hyperlinks*/
+a{
+	font-size:large;
+	color: white;
+	text-decoration:none;
+	font-family: Lucida Calligraphy;
+}
+a:hover{
+	color:rgb(200,0,245);
+}
+
+/*The footer for every pages*/
+footer{
+	font-family: comic sans MS;
+	color:white;
+	position : absolute;
+	bottom : 0px;
+	right : 0px;
+	font-size:small;
+}
+
+
+/* nav and nav li are the header used for the 'ordres'*/
+nav{
+	text-align: center;
+}
+nav li{
+	display: inline-block;
+	margin-right: 30px;
+	font-size: X-Large;
+	color: white;
+	font-family: Lucida Calligraphy;
+}
+nav li:hover{
+	color:rgb(200,0,245);
+}
+
+
+/*The list of information for each person*/
+detail{
+	font-size:large;
+	color: white;
+	text-decoration:none;
+	font-family: Lucida Calligraphy;
+}
+
+/*forbid page*/
+body.forbid{
+	background-image:url("403.png");
+	background-repeat:no-repeat;
+    background-size:50% 95%;  /*Largeur, Longueur*/
+	background-position: 300px 50px;
+
+}
+header.forbid h1{
+		width:100%;
+		text-align:left;
+		color:Black;
+		font-size: XX-large;
+font-family: Times New Roman;
+}
+
+/*The style for the page 'ajout'*/
+body.ajout{
+	background-image:url("Vulcania.jpg");
+	display: grid;
+	grid-template-columns: 200px 400px;
+}
+header.ajout h1{
+		width:100%;
+		text-align:center;
+		color:white;
+		font-size: XX-large;
+		font-family: Lucida Calligraphy;
+}
+span.ident{
+	width: 150px;
+    display: inline-block;
+	color:white
+}
+span.case{
+    margin: 5px 0;
+    display: inline-block;
+}

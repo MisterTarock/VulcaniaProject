@@ -1,0 +1,52 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{hyperref}
+\urlstyle{sf}
+
+\title{Mini Projet Vulcania}
+\author{Gillyns Emmanuel \and Puissant Baeyens Victor-Emmanuel}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	
+	\section{Sujet}
+	Ce projet a pour but de recenser les différents membres du cercle de la Vulcania.
+	Il nous paraissait intéressant d'établir un registre afin que chacun puisse se renseigner sur les détails de tout les membres, les contacter, leur souhaiter un joyeux anniversaire, connaître l'ordre auquel ils appartiennent, leur année de baptême, etc... 
+	
+	Dans cette optique, nous avons mit au point une base de donnée au format \textit{json} , celle-ci est utilisée par le serveur \textit{Python} utilisant un module \textit{bottle}, qui crée des routes vers les pages web. Ce même serveur nous permet d'afficher notre site web. La mise en page de ce dernier est gérée en \textit{HTML5} au sein du serveur. Un style \textit{CSS} est associé dans un ficher séparé et nous permet de modifier aisément le style du site simultanément sur toutes les pages au travers de différentes balises. En parallèle, nous avons également mis en place une interface graphique \textit{Tkinter} accessible par l'administrateur permettant d'apporter des modifications au contenu.
+	
+	\subsection{Utilisateur}
+	
+	Sur la page principale, nous avons accès à un bouton \og Ajouter \fg qui nous redirige vers une autre page nous permettant d'encoder de nouvelles personnes sur base d'un exemple.
+	Nous pouvons également cliquer sur le nom de quelqu'un pour afficher ses données et éventuellement les modifier ou retourner à la page d'accueil au moyen d'un bouton \og Retour\fg. Dans le cas du bouton \og Modifier\fg , il nous redirigera vers une page nous demandant de contacter l'administrateur pour faire les modifications.
+	
+	En vue d'une amélioration future, il a également été pensé d'intégrer des boutons représentant les différents ordres et nous redirigeant vers des pages où nous pourrions trouver un listing reprenant leurs membres. Cette fonctionnalité n'étant pas encore développée, ces boutons sont inactifs.
+	
+	\subsection{Administrateur}
+
+	L'administrateur ayant reçu un mail de demande de modification pourra donc via un programme \textit{Tkinter} accéder à une liste affichant toutes les personnes de la bases de données.
+	En entrant le nom de la personne concernée, il accédera à une nouvelle fenêtre lui permettant de modifier les informations de cette dernière.
+	
+	\section{Aspects originaux}
+	Le logo de la Vulcania a été placé en arrière plan de notre site web, reprenant ainsi les couleurs du cercle afin de personnaliser notre site. Un hommage à ce dernier est d'ailleurs présent dans le code source du serveur. La couleur mauve est également présente lors du passage de la souris sur un lien.
+	
+	Un aspect pratique a été de nommer chaque fichier en début de code source avec un commentaire \textit{ASCII}. 
+	
+	Le choix du port \textit{localhost} à également été judicieusement choisis en référence au folkore propre à la Vulcania et à l'ordre du Bacchus.
+	
+	
+	\section{Utilisation}
+	
+	Pour que le site web soit opérationnel, le serveur (\textit{serveur.py}) doit être lancé par un double clic à partir d'un ordinateur capable de gérer le langage de programmation \textit{Python}. Ce programme doit être stocké dans le même dossier que les autres fichiers indispensables à son bon fonctionnement (\textit{Base~de~données.txt, Vulcania.jpg, Bottle.py, style.css}, etc.).
+	
+	Une fois le serveur lancé, le site est accessible à partir du lien \url{http://localhost:6969/} sur un navigateur en local. L'utilisation du site à été pensé de manière à faciliter son utilisation: la page d'accueil reprend les différents membres du cercle, et la navigation entre les pages se fait sur bases de liens cliquables placés stratégiquement. L'ajout d'une nouvelle personne est simplifié par un exemple visible au travers des cases du formulaire à remplir.
+	
+	Le programme \textit{Tkinter} ayant pour but de modifier toutes les données précédemment encodées, son accès est réservée à l'administrateur pour des raisons de sécurité. Au lancement du programme, il sera demandé quel profil est à modifier avant d'accéder aux informations actuellement stockées dans celui-ci et y apporter les modifications voulues. Attention il est possible de supprimer certaines données d'une importance capitale via cette interface, il est donc demandé de ne pas ouvrir le programme de modification si le taux d'alcoolémie de la personne est supérieur à la taille de la base de donnée. Par ailleurs il n'en vas pas de même quand il s'agit de la compléter.
+	
+\end{document}
